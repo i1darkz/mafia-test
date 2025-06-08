@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Host</title>
+</head>
+<body style="background:#111; color:#fff; text-align:center; font-family:sans-serif; padding:20px">
+  <h1>🛠️ Host Panel</h1>
+  <p>⬇️ قائمة اللاعبين + عدد التصويتات</p>
+  <div id="votes"></div>
+  <script>
+    const players = {
+      'Leen': 2,
+      'Faisal': 1,
+      'Mohammed': 0
+    };
+    let html = '';
+    for (let p in players) {
+      html += `<div>${p} - 📊 ${players[p]} votes <button onclick="alert('☠️ تم إخراج ${p}')">🗑</button></div>`;
+    }
+    document.getElementById('votes').innerHTML = html;
+  </script>
+</body>
+</html>
